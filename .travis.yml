@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+- 2.1.2
+deploy:
+  provider: heroku
+  api_key:
+    secure: GEtkVp8bwd0R2tFMHKms1Eq66fAu1sCgDcjSvRCSN7cchmtPU0zK8W8tOGC3QpxL8wbn/7MKegJ2F3Lid+eJYxkGzTl9y3qYdo30zSGiLN9ispFfL64CzT8h6/jo4ypjYiJA1fL4zqZaB1gBmiZx1yCP57IaU01cubcV1J96MAA=
+  app: aqueous-wildwood-5483
+  on:
+    repo: k-kurakata/rank
