@@ -7,3 +7,5 @@ gem 'minitest'
 gem 'rack-test'
 
 gem 'rakuten_web_service'
+
+gem 'haml'

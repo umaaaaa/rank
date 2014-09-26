@@ -1,16 +1,18 @@
-# -*- coding: utf-8 -*-
+re 'rubygems'
 require 'sinatra'
-require 'rakuten_web_service'
+require 'haml'
 
-#参考: https://github.com/k2works/sinatra_rakuten_api
+configure :production do
+end
 
 get '/' do
-  RakutenWebService.configuration do |c|
-    c.application_id = ENV["APPID"]
-    c.affiliate_id = ENV["AFID"]
-  end
+  haml :index
+end # end [post /]
 
-  # Use genre id to fetch genre object
-  @rankings = RakutenWebService::Ichiba::Item.ranking(:age => 30, :sex => 0)
-  erb :item_ranking
-end
+post '/' do
+  # 表示するメッセージのデフォルト値
+  @message = "はい、こんにちは"
+  # もし、送信された文字列が「hello world」じゃなかったらふてくされます
+  @message = "\"hello world\"って言えよ" unless params[:str] == "hello world"
+  haml :index
+end # end [post /]end
