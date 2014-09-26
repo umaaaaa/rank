@@ -1,4 +1,7 @@
-#Ranking App
+# Choice Type Ranking App
+
+If you can choice an age and sex, this app display ranking.
+
 
 Heroku:http://aqueous-wildwood-5483.herokuapp.com/
 
