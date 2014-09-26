@@ -1,0 +1,51 @@
+<html>
+<head>
+  <title>AIIT enpit collaboration application</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" language="Javascript1.5">
+    // jquery function would written in here.
+    $(function(){
+    $("#buttonSubmit").click(function(){
+    var form = document.forms[0];
+    form.method = "get";
+    form.action = "/result";
+    form.target = "iframe";
+    form.submit();
+    });
+    });
+
+
+  </script>
+</head>
+<body>
+  <form id="form">
+    <h1>コラーボ　プロジェクト　C</h1>
+    <br />
+    <p>おお！　エンピットの　わかものよ！</p>
+    <p>ねんれいと　せいべつを　えらぶのじゃ</p>
+    <span>年代</span>
+    <select id="selectAge" name="age">
+      <option value="10">10代</option>
+      <option value="20">20代</option>
+      <option value="30">30代</option>
+      <option value="40">40代</option>
+      <option value="50">50代</option>
+      <option value="60">60代</option>
+      <option>その他</option>
+    </select>
+    <br />
+    <span>性別</span>
+    <select id="selectSex" name="sex">
+      <option value="0">男性</option>
+      <option value="1">女性</option>
+      <option>その他</option>
+    </select>
+    <br />
+    <br />
+    <input id="buttonSubmit" type="button" value="送信" />
+  </form>
+</body>
+</html>
+
+
+
